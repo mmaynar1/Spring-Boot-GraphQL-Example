@@ -1,0 +1,17 @@
+type Query {
+    employees: [Employee]
+}
+
+type Employee {
+    id: Int!
+    type: Job!
+    name: String
+    age: Int
+}
+
+enum Job {
+   SALESMAN
+   ACCOUNTANT
+   MANAGER
+   SECRETARY
+}
