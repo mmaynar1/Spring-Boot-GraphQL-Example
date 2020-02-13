@@ -11,5 +11,4 @@ public class SpringBootGraphqlExampleApplication
    {
       SpringApplication.run( SpringBootGraphqlExampleApplication.class, args );
    }
-
 }

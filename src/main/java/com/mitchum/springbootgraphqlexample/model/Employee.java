@@ -2,12 +2,15 @@ package com.mitchum.springbootgraphqlexample.model;
 
 import com.mitchum.springbootgraphqlexample.enums.Job;
 
+import java.util.List;
+
 public class Employee
 {
    private long id;
    private String name;
    private Job type;
    private int age;
+   private List<String> likes;
 
    public long getId()
    {
@@ -47,5 +50,15 @@ public class Employee
    public void setAge( int age )
    {
       this.age = age;
+   }
+
+   public List<String> getLikes()
+   {
+      return likes;
+   }
+
+   public void setLikes( List<String> likes )
+   {
+      this.likes = likes;
    }
 }

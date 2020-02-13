@@ -1,5 +1,7 @@
 type Query {
     employees: [Employee]
+    employeeById(id: Int): Employee
+    addEmployee(employee: EmployeeInput): AddEmployeeResponse
 }
 
 type Employee {
@@ -7,6 +9,20 @@ type Employee {
     type: Job!
     name: String
     age: Int
+    likes: [String]
+}
+
+input EmployeeInput {
+    id: Int!
+    type: Job!
+    name: String!
+    age: Int
+    likes: [String]
+}
+
+type AddEmployeeResponse {
+    employee: Employee
+    message: String
 }
 
 enum Job {
